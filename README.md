@@ -1,0 +1,2 @@
+# Grocery Assistant Frontend
+Angular
