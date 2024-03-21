@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Groceries } from '../models/groceries.model';
+import { Groceries } from '../models/item.model';
 
 const baseUrl = 'http://localhost:8080/api/groceries';
 
 @Injectable({
   providedIn: 'root',
 })
-export class GroceriesService {
+export class ItemService {
   constructor(private http: HttpClient) {}
 
   getAll(): Observable<Groceries[]> {

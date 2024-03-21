@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Groceries } from 'src/app/models/groceries.model';
-import { GroceriesService } from 'src/app/services/groceries.service';
+import { Item } from 'src/app/models/item.model';
+import { ItemService } from 'src/app/services/item.service';
 
 @Component({
-  selector: 'app-add-groceries',
-  templateUrl: './add-groceries.component.html',
-  styleUrls: ['./add-groceries.component.css'],
+  selector: 'app-add-item',
+  templateUrl: './add-item.component.html',
+  styleUrls: ['./add-item.component.css'],
 })
-export class AddGroceriesComponent implements OnInit {
-  groceries: Groceries = {
+export class AddItemComponent implements OnInit {
+  item: Item = {
     id: '',
     brand: '',
     item: '',
@@ -25,18 +25,18 @@ export class AddGroceriesComponent implements OnInit {
   };
   submitted = false;
 
-  constructor(private groceriesService: GroceriesService) {}
+  constructor(private itemService: ItemService) {}
 
   ngOnInit(): void {}
 
   saveGroceries(): void {
     const data = {
-      brand: this.groceries.brand,
-      item: this.groceries.item,
-      store: this.groceries.store,
+      brand: this.item.brand,
+      name: this.item.item,
+      store: this.item.store,
     };
 
-    this.groceriesService.create(data).subscribe({
+    this.itemService.create(data).subscribe({
       next: (res) => {
         console.log(res);
         this.submitted = true;
@@ -47,7 +47,7 @@ export class AddGroceriesComponent implements OnInit {
 
   newGroceries(): void {
     this.submitted = false;
-    this.groceries = {
+    this.item = {
       brand: '',
       item: '',
       store: '',

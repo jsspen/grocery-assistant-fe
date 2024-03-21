@@ -5,16 +5,16 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AddGroceriesComponent } from './components/add-groceries/add-groceries.component';
-import { GroceriesDetailsComponent } from './components/groceries-details/groceries-details.component';
-import { GroceriesListComponent } from './components/groceries-list/groceries-list.component';
+import { AddItemComponent } from './components/add-item/add-item.component';
+import { ItemDetailsComponent } from './components/item-details/item-details.component';
+import { ItemListComponent } from './components/item-list/item-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddGroceriesComponent,
-    GroceriesDetailsComponent,
-    GroceriesListComponent,
+    AddItemComponent,
+    ItemDetailsComponent,
+    ItemListComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

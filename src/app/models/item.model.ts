@@ -1,7 +1,7 @@
-export class Groceries {
+export class Item {
   id?: any;
+  name?: string;
   brand?: string;
-  item?: string;
   store?: string;
   total_price?: number;
   total_size?: number;

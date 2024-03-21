@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { GroceriesListComponent } from './components/groceries-list/groceries-list.component';
-import { GroceriesDetailsComponent } from './components/groceries-details/groceries-details.component';
-import { AddGroceriesComponent } from './components/add-groceries/add-groceries.component';
+import { ItemListComponent } from './components/item-list/item-list.component';
+import { ItemDetailsComponent } from './components/item-details/item-details.component';
+import { AddItemComponent } from './components/add-item/add-item.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'groceries', pathMatch: 'full' },
-  { path: 'groceries', component: GroceriesListComponent },
-  { path: 'groceries/:id', component: GroceriesDetailsComponent },
-  { path: 'add', component: AddGroceriesComponent },
+  { path: '', redirectTo: 'items', pathMatch: 'full' },
+  { path: 'items', component: ItemListComponent },
+  { path: 'items/:id', component: ItemDetailsComponent },
+  { path: 'add', component: AddItemComponent },
 ];
 
 @NgModule({
